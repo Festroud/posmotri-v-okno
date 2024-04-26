@@ -1,1 +1,1 @@
- Ссылка на второй учебный проект https://github.com/Festroud/posmotri-v-okno.git
+https://github.com/Festroud/posmotri-v-okno.git
