@@ -337,14 +337,3 @@ input::placeholder {
   text-decoration: none;
   background-color: #545050;
 }
-
-/* .content__card-link_current:focus {
-  outline: none;
-}
-
-.content__card-link_current:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-  margin: 2px;
-  border-radius: 0;
-  } */
