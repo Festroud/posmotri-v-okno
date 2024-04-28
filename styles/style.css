@@ -9,18 +9,15 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  width: 1200px;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: grid;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
 }
 
 h1,
@@ -43,11 +40,12 @@ ol {
 }
 
 .content {
-  max-width: 1140px;
+  width: 1140px;
   margin: 137px auto 133px auto;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 30px;
+  flex-shrink: 0;
 }
 
 .visually-hidden {
@@ -68,6 +66,7 @@ ol {
   gap: 16px;
   min-width: 711px;
   max-height: 456px;
+  margin-top: 76px;
 }
 
 .result__video-container {
@@ -108,7 +107,7 @@ ol {
   border-color: #fff; 
   background-color: transparent;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
@@ -126,17 +125,22 @@ ol {
 
 input::placeholder {
   color: rgba(255, 255, 255, 0.70);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed";
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
 }
 
 .search-form__label-text {
-  font-family: "Fira Sans Condensed";
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
@@ -144,10 +148,11 @@ input::placeholder {
 
 .search-form__checkbox-list {
   width: 212px;
+  height: 23px;
   display: flex;
   gap: 15px;
   justify-content: flex-end;
-  padding-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .search-form__pseudo-checkbox {
@@ -173,7 +178,7 @@ input::placeholder {
 }
 
 .search-form__label:focus {
-  outline: none;
+  outline-color: none;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -181,8 +186,9 @@ input::placeholder {
   outline-offset: 1px;
 }
 
-.search-form__fieldset:hover .search-form__label-text {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* //// стили для кнопок \\\\ */
@@ -197,6 +203,7 @@ input::placeholder {
   cursor: pointer;
   border:1px solid #fff;
   box-shadow: none;
+  height: 34px;
 }
 
 .button:focus {
@@ -220,24 +227,24 @@ input::placeholder {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   text-align: center;
 }
 
 .more-button {
   width: 100%;
-  height: 34px;
 }
 
 /* //// подборка видео \\\\ */
 
 .content__details {
-  width: 100%;
-  height: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 18px;
+  gap: 17px;
+  flex-grow: 1;
 }
 
 .title {
@@ -251,11 +258,13 @@ input::placeholder {
 
 .content__list {
   max-height: 298px;
-  overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  scrollbar-width: none;
-  padding-top: 5px;
+  padding: 2px;
+}
+
+.preloader-template{
+  position: relative;
 }
 
 .content__list-item:not(:last-child) {
@@ -287,7 +296,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;  
+  gap: 6px;
 }
 
 .content__video-card-title {
@@ -296,6 +305,10 @@ input::placeholder {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
@@ -303,6 +316,7 @@ input::placeholder {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
+  word-wrap: break-word;
 }
 
 .content__video-card-thumbnail {
@@ -323,12 +337,10 @@ input::placeholder {
 .content__video-card:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
-  margin: 2px;
 } 
 
 .content__video-card:hover {
   text-decoration: underline;
-  text-underline-position: under;
   cursor: pointer;
 }
 
