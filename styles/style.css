@@ -46,7 +46,7 @@ ol {
   width: 1140px;
   margin: 137px auto 133px auto;
   display: flex;
-  align-items: flex-start; /*по заданию нужно расположить элементы .content в строку, прижав к низу вертикальной оси, но тогда h1 падает в низ, только если не использовать фиксированные размеры для .content__details, поэтому тут взял flex-start */
+  align-items: flex-start;
   gap: 30px;
   flex-shrink: 0;
 }
@@ -69,6 +69,7 @@ ol {
   min-width: 711px;
   max-height: 456px;
   margin-top: 76px;
+  gap: 15px;
 }
 
 .result__video-container {
@@ -150,7 +151,7 @@ input::placeholder {
 
 .search-form__checkbox-list {
   width: 212px;
-  height: 23px;
+  height: 24px;
   display: flex;
   gap: 15px;
   justify-content: flex-end;
@@ -185,12 +186,15 @@ input::placeholder {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: 0.5px;
+}
+
+.search-form__label:hover {
+  cursor: pointer;
 }
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
-  cursor: pointer;
 }
 
 /* //// стили для кнопок \\\\ */
@@ -259,7 +263,7 @@ input::placeholder {
 }
 
 .content__list {
-  max-height: 298px;
+  height: 298px;
   overflow-y: auto;
   position: relative;
   padding: 2px;
