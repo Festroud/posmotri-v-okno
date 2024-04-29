@@ -16,10 +16,10 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: grid;
-  align-items: center;
-  justify-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 h1,
