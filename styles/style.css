@@ -46,7 +46,7 @@ ol {
   width: 1140px;
   margin: 137px auto 133px auto;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; /*по заданию нужно расположить элементы .content в строку, прижав к низу вертикальной оси, но тогда h1 падает в низ, только если не использовать фиксированные размеры для .content__details, поэтому тут взял flex-start */
   gap: 30px;
   flex-shrink: 0;
 }
@@ -66,7 +66,6 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 16px;
   min-width: 711px;
   max-height: 456px;
   margin-top: 76px;
@@ -85,7 +84,7 @@ ol {
   object-position: center;
 }
 
-/* //// форма поиска \\\\*/
+/* //// форма поиска  \\\\*/
 .search-form {
   width: 100%;
   display: flex;
