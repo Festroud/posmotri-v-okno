@@ -265,10 +265,6 @@ input::placeholder {
   padding: 2px;
 }
 
-.preloader-template{
-  position: relative;
-}
-
 .content__list-item:not(:last-child) {
   padding-bottom: 30px;
 }
